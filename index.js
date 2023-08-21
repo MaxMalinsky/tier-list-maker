@@ -9,7 +9,7 @@ const images = [
 ]
 
 initializeBank()
-
+initializeTiers()
 
 function allowDrop(ev) {
   ev.preventDefault();
@@ -32,13 +32,43 @@ function initializeBank() {
   const bank = document.getElementById("bank")
   for (let i = 0; i < images.length; i++) {
     bank.innerHTML += `<img id="${images[i]}" src="${images[i]}" class="image" draggable="true" ondragstart="drag(event)" width="100px" height="100px">`
-    // console.log(images[i])
-    // var image = document.createElement("img")
-    // image.src = images[i]
-    // image.style.width = "100px"
-    // image.style.height = "100px"
-    // image.draggable = true
-    // image.ondragstart = "drag(event)"
-    // bank.appendChild(image)
+  }
+}
+
+
+function initializeTiers() {
+  const t1 = "God";
+  const t2 = "DTC";
+  const t3 = "If I Have To";
+  const t4 = "Painful";
+  const t5 = "Dog Water";
+  const t6 = "Who?";
+  const tierNames = [
+      t1,
+      t2,
+      t3,
+      t4,
+      t5,
+      t6,
+  ];
+  const tierColors = [
+      "#ff7f7f",
+      "#ffbf7f",
+      "#ffdf7f",
+      "#ffff7f",
+      "#bfff7f",
+      "#7fff7f",
+      "#7fffbf",
+      "#7fffff",
+  ];
+
+  for (let i = 0; i < tierNames.length; i++) {
+    const tiersContainer = document.getElementById("tiers")
+
+    tiersContainer.innerHTML += `<div class="tier">
+    <div class="tier-title" style="background-color:${tierColors[i]};"><h1 class="title">${tierNames[i]}</h1></div>
+    <div id="div1" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+  </div>`
   }
 }
