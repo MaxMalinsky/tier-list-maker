@@ -1,2 +1,2 @@
 # Rank Text Editors
-## inspired by ThePrimeagen
+#### inspired by ThePrimeagen
