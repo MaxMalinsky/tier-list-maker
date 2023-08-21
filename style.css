@@ -1,0 +1,24 @@
+.image {
+    width:75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+body {
+    background-color: black;
+}
+
+#div1 {
+    width: 75px;
+    height: 75px;
+    border: 1px solid #aaaaaa;
+  }
+
+
+  #bank {
+    position:fixed;
+    justify-self: center;
+    bottom:50px;
+    width: calc(100vw - 20px);
+    border: 2px solid #aaaaaa;
+  }
